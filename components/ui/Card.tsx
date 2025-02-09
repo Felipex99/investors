@@ -49,6 +49,8 @@ export default function Card({src, dataCompra, dataVenda, dias,valorCompra, valo
                 <Image source={!imgSelect?require("@/assets/images/petr4.png"):{uri:imgSelect}} style={style.image}/>
             </Pressable>
             {/* INFO DO CARD */}
+            <Pressable onPress={()=>alert("Editar")}>
+
             <LinearGradient colors={(resultado>0)?["#30BE4A","#13541F"]:["#BE3030","#f01717"]} style={{padding:5,borderRadius:8}}>
                 
                 <View style={[style.card, {
@@ -113,6 +115,7 @@ export default function Card({src, dataCompra, dataVenda, dias,valorCompra, valo
                 </LinearGradient>
                 </View>
             </LinearGradient>
+            </Pressable>
         </View>
     )
 }
