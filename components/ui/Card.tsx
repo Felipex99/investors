@@ -20,6 +20,7 @@ type Props = {
 }
 
 export default function Card({src, dataCompra, dataVenda, dias,valorCompra, valorVenda, cotas, cotaValor, cotaValorVenda, porcentagem, resultado}: Props){
+    
     const [imgSelect, setImgSelect] = useState<string | undefined>(undefined)
     const imgPicker = async()=>{
         let result = await ImagePicker.launchImageLibraryAsync({
