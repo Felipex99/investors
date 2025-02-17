@@ -5,11 +5,11 @@ import { Ionicons } from "@expo/vector-icons"
 import * as ImagePicker from "expo-image-picker"
 import DateTime from "@/components/ui/DateTime"
 import AddValor from "@/components/ui/AdValor"
-
-
-
+import Tributo from "@/components/ui/Tributo"
+import Botao from "@/components/ui/Botao"
 
 const width = Dimensions.get("window").width
+
 export default function EditorScreen(){
 
     const [imgSelect, setImgSelect] = useState<string | undefined>(undefined)
@@ -83,9 +83,14 @@ export default function EditorScreen(){
                         </View>
 
                         <AddValor/>
+                        <Tributo/>
 
                     </View>
                 </LinearGradient>
+                <View style={style.valoresRow}>
+                    <Botao text="CANCELAR" color="red"/>
+                    <Botao text="SALVAR"/>
+                </View>
             </View>
         </ScrollView>
     )
@@ -99,6 +104,7 @@ const style = StyleSheet.create({
     },
     view:{
         alignItems:"center",
+        marginBottom:20
     },
     image:{
         width:width/3.9,
